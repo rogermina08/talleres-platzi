@@ -1,0 +1,25 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Agregar Canvocatorias</h4>
+        </div>
+        <div class="card-body">
+            <form action="" ng>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input [(ngModel)]="convocatorias.nombre" name="nombre" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="fecha_imicio">Fecha de Inicio</label>
+                    <input [(ngModel)]="convocatorias.fecha_inicio" name="fecha_imicio" type="date" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="fecha_fin">Fecha de Cierre</label>
+                    <input [(ngModel)]="convocatorias.fecha_fin" name="fecha_fin" type="date" class="form-control" />
+                </div>
+                <button (click)="Guardar()" class="btn btn-danger">Guadar</button>
+            </form>
+        </div>
+    </div>
+</div>
+

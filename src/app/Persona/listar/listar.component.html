@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h4>Listado de Convocatorias</h4>
+      <h5 class="card-subtitle col-md-12 " style="text-align: right;">
+        <button class="btn btn-success" (click)="nuevo()">Nueva convocatoria</button>
+      </h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Fecha Inicio</th>
+                  <th>Fecha Fin</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let convocatoria of convocatorias">
+                  <td>{{convocatoria._id}}</td>
+                  <td>{{convocatoria.nombre}}</td>
+                  <td>{{convocatoria.fecha_inicio | date:'dd/MM/yyyy'}}</td>
+                  <td>{{convocatoria.fecha_fin | date:'dd/MM/yyyy'}}</td>
+                  <td>{{convocatoria.estado}}</td>
+                  <td>
+                    <button class="btn btn-primary" (click)="editar(convocatoria)">Editar</button>
+                    <button class="btn btn-danger" (click)="eliminar(convocatoria)">Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
